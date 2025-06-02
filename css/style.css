@@ -15,19 +15,38 @@ body {
 /* Cabeçalho e Navegação */
 header {
     background-color: #1a1a1a;
-    padding: 1rem 0;
+    padding: 1rem 20px; /* Adicionado padding lateral para o conteúdo não colar nas bordas */
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #ff3333;
+    display: flex; /* Adicionado para usar flexbox no header */
+    justify-content: space-between; /* Distribui os itens (nome e nav) */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilos para o nome na barra de navegação */
+.my-name {
+    color: red; /* Cor do texto em vermelho */
+    font-size: 1.8em; /* Ajuste o tamanho da fonte conforme preferir */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombreado escuro (ajuste os valores se necessário) */
+    /* Não precisa de margin-right aqui se usar justify-content: space-between no header */
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Manter centralizado se for o único item, mas o header já faz o papel de distribuição */
     list-style: none;
+    margin: 0; /* Remover margem padrão da ul */
+    padding: 0; /* Remover padding padrão da ul */
 }
+
+nav ul li {
+    /* Remover flex-wrap de nav ul e colocar nos li se precisar de quebra de linha apenas em li */
+}
+
 
 nav ul li a {
     color: #e0e0e0;
@@ -161,6 +180,54 @@ main {
     font-size: 0.95rem;
 }
 
+/* Conteúdo da Disciplina (Páginas internas) */
+.discipline-content {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.discipline-content h1 {
+    color: #ff3333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.discipline-content p strong {
+    color: #ff3333; /* Para destacar o professor */
+}
+
+.discipline-content h2 {
+    color: #ff3333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.discipline-content ul {
+    list-style: none; /* Remove marcadores de lista padrão */
+    padding-left: 0;
+}
+
+.discipline-content ul li {
+    padding: 0.5rem 0;
+    color: #b0b0b0;
+    position: relative;
+    padding-left: 1.5rem; /* Espaço para o marcador customizado */
+}
+
+.discipline-content ul li::before {
+    content: "•"; /* Marcador de lista customizado */
+    color: #ff3333;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+
 /* Contato */
 .contact h1 {
     text-align: center;
@@ -197,7 +264,7 @@ main {
 }
 
 .contact-card a {
-   color: #ff3333;
+    color: #ff3333;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -279,8 +346,8 @@ footer p {
     letter-spacing: 1px;
 }
 
-/* Página de Disciplina */
-.discipline-detail {
+/* Ajustes para a página de conteúdo das disciplinas */
+.discipline-detail { /* Usei .discipline-content na minha sugestão de HTML para as matérias, certifique-se de qual está usando */
     background-color: #1a1a1a;
     padding: 2rem;
     border-radius: 8px;
@@ -378,12 +445,24 @@ footer p {
         font-size: 1.1rem;
     }
     
+    /* Ajustes para a navegação em telas menores */
+    header {
+        flex-direction: column; /* Empilha nome e nav */
+        padding: 1rem 1.5rem; /* Ajusta padding */
+    }
+
+    .my-name {
+        margin-bottom: 1rem; /* Espaçamento entre o nome e a navegação */
+        font-size: 1.5em; /* Ajusta tamanho da fonte para telas menores */
+    }
+    
     nav ul {
         flex-wrap: wrap;
+        justify-content: center; /* Centraliza os links quando quebram linha */
     }
     
     nav ul li a {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem; /* Ajusta padding para links em telas menores */
+        font-size: 0.85rem; /* Ajusta tamanho da fonte */
     }
 }
