@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Portfólio ADS</title>
+    <meta name="description" content="Entre em contato com Wendell Alves Nascimento. Informações de contato, LinkedIn, GitHub e formulário para envio de mensagens.">
+    <meta name="keywords" content="contato, Wendell Nascimento, LinkedIn, GitHub, email">
+    <title>Contato - Wendell Nascimento | Portfólio ADS</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="disciplinas.html">Disciplinas</a></li>
-                <li><a href="contato.html" class="active">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <span class="my-name">Wendell | Portfólio</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="disciplinas.html">Disciplinas</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -32,7 +37,7 @@
                 
                 <div class="contact-form">
                     <h2>Envie uma Mensagem</h2>
-                    <form>
+                    <form action="mailto:wendell.nascimento2006@gmail.com" method="post" enctype="text/plain">
                         <div class="form-group">
                             <label for="name">Nome:</label>
                             <input type="text" id="name" name="name" required>
