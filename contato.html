@@ -3,52 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Portfólio ADS</title>
+    <meta name="description" content="Canais de contato de Wendell Alves Nascimento.">
+    <title>Contato | Wendell Nascimento</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="disciplinas.html">Disciplinas</a></li>
-                <li><a href="contato.html" class="active">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <a class="my-name" href="index.html" aria-label="Wendell Nascimento — página inicial">
+                <span class="brand-mark" aria-hidden="true">WN</span>
+                <span>Wendell Nascimento</span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="disciplinas.html">Disciplinas</a></li>
+                    <li><a href="contato.html" class="active" aria-current="page">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="contact">
-            <h1>Informações de Contato</h1>
-            
+    <main id="conteudo">
+        <section class="contact" aria-labelledby="contact-title">
+            <div class="page-intro">
+                <p class="eyebrow">Vamos conversar</p>
+                <h1 id="contact-title">Uma boa ideia pode começar por aqui.</h1>
+                <p>Escolha o canal que preferir ou prepare uma mensagem pelo formulário.</p>
+            </div>
+
             <div class="contact-info">
                 <div class="contact-card">
-                    <h2>Entre em Contato</h2>
-                    <p><strong>Email:</strong> wendell.nascimento2006@gmail.com</p>
-                    <p><strong>Telefone:</strong> (17) 99758-0228</p>
-                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/wendell-nascimento-0923a8244/" target="_blank">linkedin.com/wendell-nascimento</a></p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/wendzera" target="_blank">github.com/wendzera</a></p>
+                    <p class="card-kicker">Canais diretos</p>
+                    <h2>Entre em contato</h2>
+                    <address>
+                        <a class="contact-row" href="mailto:wendell.nascimento2006@gmail.com">
+                            <span>E-mail</span>
+                            <strong>wendell.nascimento2006@gmail.com</strong>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                        <a class="contact-row" href="tel:+5517997580228">
+                            <span>Telefone</span>
+                            <strong>(17) 99758-0228</strong>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                        <a class="contact-row" href="https://www.linkedin.com/in/wendell-nascimento-0923a8244/" target="_blank" rel="noopener noreferrer">
+                            <span>LinkedIn</span>
+                            <strong>/wendell-nascimento</strong>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                        <a class="contact-row" href="https://github.com/wendzera" target="_blank" rel="noopener noreferrer">
+                            <span>GitHub</span>
+                            <strong>@wendzera</strong>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </address>
                 </div>
-                
+
                 <div class="contact-form">
-                    <h2>Envie uma Mensagem</h2>
-                    <form>
+                    <p class="card-kicker">Mensagem</p>
+                    <h2>Escreva para mim</h2>
+                    <p class="form-note">Ao enviar, seu aplicativo de e-mail será aberto com a mensagem preenchida.</p>
+                    <form id="contact-form">
                         <div class="form-group">
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Como posso chamar você?" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@exemplo.com" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="message">Mensagem:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Conte um pouco sobre o assunto." required></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn">Enviar</button>
+
+                        <button type="submit" class="btn">Preparar e-mail <span aria-hidden="true">↗</span></button>
+                        <p class="form-status" id="form-status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -56,7 +91,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Wendell | Portfólio ADS. Todos os direitos reservados.</p>
+        <p class="footer-brand">Wendell Nascimento</p>
+        <p>Portfólio acadêmico · ADS</p>
+        <p>&copy; 2026</p>
     </footer>
+
+    <script src="js/contact.js"></script>
 </body>
 </html>

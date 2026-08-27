@@ -4,24 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disciplinas - Portfólio ADS</title>
+    <meta name="description" content="Disciplinas e conteúdos estudados por Wendell Nascimento no curso de Análise e Desenvolvimento de Sistemas.">
+    <title>Disciplinas | Wendell Nascimento</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="disciplinas.html" class="active">Disciplinas</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <a class="my-name" href="index.html" aria-label="Wendell Nascimento — página inicial">
+                <span class="brand-mark" aria-hidden="true">WN</span>
+                <span>Wendell Nascimento</span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="disciplinas.html" class="active" aria-current="page">Disciplinas</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="disciplines">
-            <h1>Disciplinas do Curso</h1>
+    <main id="conteudo">
+        <section class="disciplines" aria-labelledby="disciplines-title">
+            <div class="page-intro page-intro-disciplines">
+                <div>
+                    <p class="eyebrow">Caderno de formação</p>
+                    <h1 id="disciplines-title">Disciplinas do curso</h1>
+                </div>
+                <p>Um mapa do conteúdo que forma minha base técnica — da lógica e arquitetura à experiência de quem usa o produto.</p>
+            </div>
 
             <div class="discipline-grid">
                 <div class="discipline-card">
@@ -140,7 +155,7 @@
 
                 <div class="discipline-card">
                     <h2>Estruturas de Dados</h2>
-                    <p>Professor: Willian Guimarães Borges</p>
+                    <p>Professor: Cristiano Pires Martins</p>
                     <a href="./materias/estrutura-dados.html" class="btn">Ver Conteúdo</a>
                 </div>
 
@@ -166,7 +181,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Wendell | Portfólio ADS. Todos os direitos reservados.</p>
+        <p class="footer-brand">Wendell Nascimento</p>
+        <p>Portfólio acadêmico · ADS</p>
+        <p>&copy; 2026</p>
     </footer>
 </body>
 

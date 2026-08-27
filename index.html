@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio ADS</title>
+    <meta name="description" content="Portfólio acadêmico de Wendell Alves Nascimento, estudante de Análise e Desenvolvimento de Sistemas.">
+    <title>Wendell Nascimento | Portfólio ADS</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
     <header>
         <div class="header-content">
-            <span class="my-name">Wendell | Portfólio</span>
-            <nav>
+            <a class="my-name" href="index.html" aria-label="Wendell Nascimento — página inicial">
+                <span class="brand-mark" aria-hidden="true">WN</span>
+                <span>Wendell Nascimento</span>
+            </a>
+            <nav aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="index.html" class="active" aria-current="page">Início</a></li>
                     <li><a href="disciplinas.html">Disciplinas</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -20,28 +26,67 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Bem-vindo ao meu Portfólio Acadêmico</h1>
-            <p>Análise e Desenvolvimento de Sistemas AMS</p>
+    <main id="conteudo">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Portfólio acadêmico · ADS</p>
+                <h1 id="hero-title">Ideias saem do caderno. Viram <em>sistemas.</em></h1>
+                <p class="hero-lead">Bem-vindo ao registro da minha formação em Análise e Desenvolvimento de Sistemas AMS — aprendizados, disciplinas e projetos em construção.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="disciplinas.html">Explorar disciplinas <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="contato.html">Falar comigo <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+
+            <aside class="hero-index" aria-label="Resumo da formação">
+                <p class="index-label">Caderno de formação</p>
+                <dl>
+                    <div>
+                        <dt>Área</dt>
+                        <dd>Tecnologia &amp; produto</dd>
+                    </div>
+                    <div>
+                        <dt>Percurso</dt>
+                        <dd>ADS · Programa AMS</dd>
+                    </div>
+                    <div>
+                        <dt>Foco</dt>
+                        <dd>Aprender construindo</dd>
+                    </div>
+                </dl>
+                <span class="index-note" aria-hidden="true">{ evolução contínua }</span>
+            </aside>
         </section>
 
-        <section class="about">
-            <h2>Sobre Mim</h2>
+        <section class="about" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="eyebrow">Quem está por trás do código</p>
+                <h2 id="about-title">Sobre mim</h2>
+            </div>
+
             <div class="about-content">
                 <div class="about-text">
-                    <p>Olá! Meu nome é Wendell Alves Nascimento e sou estudante de Análise e Desenvolvimento de Sistemas. Este portfólio foi criado para documentar minha jornada acadêmica e os conhecimentos adquiridos durante o curso.</p>
+                    <p class="about-intro">Olá! Meu nome é Wendell Alves Nascimento e sou estudante de Análise e Desenvolvimento de Sistemas.</p>
+                    <p>Este portfólio foi criado para documentar minha jornada acadêmica e os conhecimentos adquiridos durante o curso.</p>
                     <p>Aqui você encontrará informações sobre as disciplinas que cursei, os projetos desenvolvidos e minhas informações de contato.</p>
+                    <a class="text-link" href="disciplinas.html">Conhecer meu percurso <span aria-hidden="true">→</span></a>
                 </div>
-                <div class="about-image">
-                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQF-VR1Nt5N14g/profile-displayphoto-shrink_200_200/B4DZT1yGzEHwAY-/0/1739290342201?e=1754524800&v=beta&t=YqgfjSroczwT0y6YIZ9QwMJ4ic0EjLg1JiFSMzUsx5A" alt="">
+
+                <div class="about-image" aria-label="Monograma de Wendell Nascimento">
+                    <div class="portrait-card" aria-hidden="true">
+                        <span class="portrait-meta portrait-meta-top">ADS / AMS</span>
+                        <strong>W<span>N</span></strong>
+                        <span class="portrait-meta portrait-meta-bottom">São Paulo · BR</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Wendell | Portfólio ADS. Todos os direitos reservados.</p>
+        <p class="footer-brand">Wendell Nascimento</p>
+        <p>Portfólio acadêmico · ADS</p>
+        <p>&copy; 2026</p>
     </footer>
 </body>
 </html>
